@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>Soup recipes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
+    <a class="navbar-brand" href="/recipes/home">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/soup">Soup </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/maindish">Main Dish</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/salad">Salad</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/dessert">Dessert</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/miscellaneous">Miscellaneous</a>
+            </li>
+
+        </ul>
+
+        <a class="btn btn-primary" href="/recipes/add">Add Recipe</a>
+
+        <a class="btn btn-success" href="/recipes/about">About me</a>
+
+        </button>
+    </div>
+</nav>
+<div class="container-fluid">
+    <header class="jumbotron my-2">
+        <h2 class="display-5">Soup recipes</h2>
+        <p class="lead">The go-to food if you don't like or don't have the time to cook everyday.</p>
+    </header>
+    <div th:if="${not soupList.empty}">
+
+
+        <div class="row text-center">
+            <th>
+            <td th:each="recipe: ${soupList}">
+            </th>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img th:src="@{'data:image/png;base64,'+${recipe.image}}" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title" th:text="${recipe.title}"></h4>
+                        <p class="card-text" th:text="${recipe.description}"></p>
+                    </div>
+                    <div class="card-footer">
+                        <a th:href="@{'/recipes/'+${recipe.id}}" class="btn btn-primary">Find Out More!</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <h2 th:if="${soupList.empty}">No recipes in the database, click <a th:href="@{/recipes/home}">here</a> to go back</h2>
+    </div>
+
+</div>
+</body>
+</html>

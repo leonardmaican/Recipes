@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>About me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
+    <a class="navbar-brand" href="/recipes/home">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/soup">Soup </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/maindish">Main Dish</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/salad">Salad</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/dessert">Dessert</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/recipes/miscellaneous">Miscellaneous</a>
+            </li>
+
+        </ul>
+
+        <a class="btn btn-primary" href="/recipes/add">Add Recipe</a>
+
+        <a class="btn btn-success" href="/recipes/about">About me</a>
+
+
+    </div>
+</nav>
+<div class="container-fluid">
+    <header class="jumbotron my-2">
+        <h2 class="display-3">About me page</h2>
+        <p class="lead">Here I wrote a few words about me, the website and the experience this course was. Also added a picture, don't pay too much attention to it</p>
+    </header>
+<div class="card mb-6 " style="max-width:1080;">
+    <div class="row no gutters">
+        <div class="col-md-7">
+            <img src="https://i.ibb.co/P966cF5/cazinoct.jpg" class="card-img" >
+        </div>
+        <div class="col-md-5">
+            <div class="card-body">
+                <h2 class="card-title">About me</h2>
+                <p style="float:right" class="card-text">Hi there! My name is Leo, I'm 28 years old and I'm currently learning Java. In 2014 I graduated from college with a sociologist diploma and currently I'm working as a receptionist at a hotel.<br/>
+                    My hobbies include fishing, biking and gaming with my pals on PlayStation.<br/>
+                    Whenever I feel like cooking, which isn't often, I like cooking meals that remind me of my childhood. I usually call my mother for those recipes and 99% of the time I nail it.<br/>
+                    Designing this website was a real test for me. It was a lot of work, but I enjoyed doing it. I love that feeling you get when after many tries you get something right and it works.<br/>
+                    I learned A LOT in these last 20 weeks and I want to thank the mentors for that.<br/><br/>
+                    Best regards, <br/>
+                    Leo
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
